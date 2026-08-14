@@ -200,15 +200,11 @@
   const JSONBIN_API_KEY = '$2a$10$lYqD8oQfpYkIXRNfIlFHnO2T1W6vcH17TzzEIAwWbbaVfD4IEdi72';
   const JSONBIN_BASE = 'https://api.jsonbin.io/v3/b/' + JSONBIN_BIN_ID;
 
-  function syncConfigured(){
-    return JSONBIN_BIN_ID && JSONBIN_BIN_ID !== '6a7f72d3f5f4af5e29178612' &&
-           JSONBIN_API_KEY && JSONBIN_API_KEY !== '$2a$10$lYqD8oQfpYkIXRNfIlFHnO2T1W6vcH17TzzEIAwWbbaVfD4IEdi72';
-  }
-
- function syncConfigured(){
+function syncConfigured(){
     return JSONBIN_BIN_ID && JSONBIN_BIN_ID !== '6a7f72d3f5f4af5e29178612' &&
            JSONBIN_API_KEY && JSONBIN_API_KEY !== '$2a$10$lYqD8oQfpYkIXRNfIlFHnO2T1W6vcH17TzzEIAwWbbaVfD4IEdi72';
 }
+  
   async function loadWords(){
     // local cache first so the app is instant / works offline
     try{
