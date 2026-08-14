@@ -205,11 +205,10 @@
            JSONBIN_API_KEY && JSONBIN_API_KEY !== '$2a$10$lYqD8oQfpYkIXRNfIlFHnO2T1W6vcH17TzzEIAwWbbaVfD4IEdi72';
   }
 
-  function setSyncStatus(text, isError){
-    const el = document.getElementById('syncStatus');
-    if(el){ el.textContent = text; el.style.color = isError ? 'var(--oxblood)' : 'var(--ink-faint)'; }
-  }
-
+ function syncConfigured(){
+    return JSONBIN_BIN_ID && JSONBIN_BIN_ID !== 'YOUR_BIN_ID_HERE' &&
+           JSONBIN_API_KEY && JSONBIN_API_KEY !== 'YOUR_X_ACCESS_KEY_HERE';
+}
   async function loadWords(){
     // local cache first so the app is instant / works offline
     try{
